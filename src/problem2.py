@@ -402,14 +402,19 @@ def problem2c(x):
       problem2c( 101 )    returns 101  (because 101 and 1+0+1 are prime)
       problem2c(   4 )    returns 5
       problem2c(  61 )    returns 61
-      problem2c(  62 )    returns XX
+      problem2c(  62 )    returns 67
     Type hints:
       :type x:    int
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    while True:
+        if is_prime(x) and is_prime(sum_of_digits(x)):
+            return x
+        x = x + 1
 
 
 ###############################################################################
