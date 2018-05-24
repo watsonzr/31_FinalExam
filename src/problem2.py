@@ -20,8 +20,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
     run_test_problem2a()
-    # run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2b()
+    run_test_problem2c()
 
 
 def is_prime(n):
@@ -256,9 +256,17 @@ def problem2b(sequence):
       :type sequence  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    largest = 0
+    location = None
+    for i in range(len(sequence)):
+        if abs(sequence[i]) > largest:
+            largest = abs(sequence[i])
+            location = i
+    return location
 
 
 def run_test_problem2c():
